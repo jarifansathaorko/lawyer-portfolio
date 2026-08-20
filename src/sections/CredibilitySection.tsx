@@ -8,8 +8,8 @@ import { MdGavel } from "react-icons/md";
 const credentials = [
   {
     icon: <FaUserTie size={28} aria-hidden="true" />,
-    title: "২৫ বছরের অভিজ্ঞতা",
-    desc: "দীর্ঘ ২৫ বছর ধরে আইন পেশায় যুক্ত থেকে দেওয়ানি, সম্পত্তি ও ভূমি-সংক্রান্ত বিষয়ে পেশাগত সেবা।",
+    title: "৩০+ বছরের অভিজ্ঞতা",
+    desc: "দীর্ঘ ৩০+ বছর ধরে আইন পেশায় যুক্ত থেকে দেওয়ানি, সম্পত্তি ও ভূমি-সংক্রান্ত বিষয়ে পেশাগত সেবা।",
   },
   {
     icon: <GiScales size={30} aria-hidden="true" />,

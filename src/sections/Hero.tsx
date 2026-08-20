@@ -107,7 +107,7 @@ export default function Hero() {
               transition: "opacity 0.7s ease 0.3s, transform 0.7s ease 0.3s",
             }}
           >
-            ২৫ বছরের অভিজ্ঞতায়
+            ৩০+ বছরের অভিজ্ঞতায়
             <br />
             <span style={{ color: "var(--color-gold)" }}>বিশ্বস্ত দেওয়ানি</span>{" "}
             আইন সেবা

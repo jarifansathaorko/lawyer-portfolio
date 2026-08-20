@@ -70,7 +70,7 @@ export default function Footer() {
               className="font-noto-sans-bengali text-sm leading-relaxed mt-4"
               style={{ color: "rgba(245, 245, 220, 0.75)" }}
             >
-              ২৫ বছরের অভিজ্ঞতায় দেওয়ানি, সম্পত্তি, ভূমি, উত্তরাধিকার ও
+              ৩০+ বছরের অভিজ্ঞতায় দেওয়ানি, সম্পত্তি, ভূমি, উত্তরাধিকার ও
               রিয়েল এস্টেট সংক্রান্ত আইনগত সেবা।
             </p>
 
