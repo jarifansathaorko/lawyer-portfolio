@@ -101,14 +101,14 @@ export default function ContactSection() {
     <section
       ref={sectionRef}
       id="contact"
-      className="section-pad"
+      className="section-pad w-full max-w-full overflow-hidden"
       aria-label="যোগাযোগ"
       style={{ backgroundColor: "var(--color-ivory)" }}
     >
       <div className="container-legal">
         {/* Header */}
         <div
-          className="max-w-xl mb-14"
+          className="max-w-xl mb-10 sm:mb-14"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(20px)",
@@ -120,7 +120,7 @@ export default function ContactSection() {
           <h2
             className="font-noto-serif-bengali font-bold mb-4"
             style={{
-              fontSize: "clamp(1.6rem, 3vw, 2.25rem)",
+              fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
               color: "var(--color-forest-green)",
               lineHeight: "1.3",
             }}
@@ -128,49 +128,48 @@ export default function ContactSection() {
             আইনগত পরামর্শের জন্য যোগাযোগ করুন
           </h2>
           <p
-            className="font-noto-sans-bengali text-charcoal-light leading-relaxed"
-            style={{ fontSize: "1rem" }}
+            className="font-noto-sans-bengali text-charcoal-light leading-relaxed text-sm sm:text-base"
           >
             আপনার আইনগত বিষয় নিয়ে আলোচনা করতে সরাসরি যোগাযোগ করুন অথবা
             চেম্বারে সাক্ষাতের জন্য সময় নির্ধারণ করুন।
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Info Column */}
           <div
             style={{
               opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : "translateX(-30px)",
+              transform: visible ? "translateY(0)" : "translateY(30px)",
               transition: "opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s",
             }}
           >
             {/* Lawyer card */}
             <div
-              className="p-8 mb-6"
+              className="p-6 sm:p-8 mb-6"
               style={{
                 backgroundColor: "var(--color-forest-green)",
                 borderLeft: "4px solid var(--color-gold)",
                 boxShadow: "0 10px 30px rgba(1, 50, 44, 0.15)",
               }}
             >
-              <div className="flex items-center justify-between gap-4 mb-6">
+              <div className="flex items-center justify-between gap-3 sm:gap-4 mb-6">
                 <div>
                   <h3
-                    className="font-noto-serif-bengali font-bold mb-1"
-                    style={{ fontSize: "1.3rem", color: "var(--color-ivory)" }}
+                    className="font-noto-serif-bengali font-bold mb-1 text-base sm:text-xl"
+                    style={{ color: "var(--color-ivory)" }}
                   >
                     মোল্লা মোঃ আলী আশ্রাফ
                   </h3>
                   <div
-                    className="font-noto-sans-bengali font-medium mb-1"
-                    style={{ fontSize: "0.9rem", color: "var(--color-gold-light)" }}
+                    className="font-noto-sans-bengali font-medium mb-1 text-xs sm:text-sm"
+                    style={{ color: "var(--color-gold-light)" }}
                   >
                     এম.এস.এস, এলএল.বি (ঢা: বি:)
                   </div>
                   <p
-                    className="font-noto-sans-bengali"
-                    style={{ fontSize: "0.85rem", color: "var(--color-gold)" }}
+                    className="font-noto-sans-bengali text-xs sm:text-sm"
+                    style={{ color: "var(--color-gold)" }}
                   >
                     অ্যাডভোকেট, সুপ্রিম কোর্ট অব বাংলাদেশ
                   </p>
@@ -178,7 +177,7 @@ export default function ContactSection() {
 
                 {/* Lawyer Photo Thumbnail */}
                 <div
-                  className="relative flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 overflow-hidden rounded-md"
+                  className="relative flex-shrink-0 w-16 h-16 sm:w-24 sm:h-24 overflow-hidden rounded-md"
                   style={{
                     border: "2px solid var(--color-gold)",
                     boxShadow: "0 4px 15px rgba(0,0,0,0.3)",
@@ -238,7 +237,7 @@ export default function ContactSection() {
               {chambers.map((chamber, idx) => (
                 <div
                   key={idx}
-                  className="p-6 bg-white"
+                  className="p-5 sm:p-6 bg-white"
                   style={{
                     border: "1px solid rgba(212, 175, 55, 0.2)",
                     borderLeft: "3px solid var(--color-gold)",
@@ -254,13 +253,12 @@ export default function ContactSection() {
                     </h4>
                   </div>
                   <p
-                    className="font-noto-sans-bengali text-charcoal leading-relaxed mb-3"
-                    style={{ fontSize: "0.9rem" }}
+                    className="font-noto-sans-bengali text-charcoal leading-relaxed mb-3 text-xs sm:text-sm"
                   >
                     {chamber.address}
                   </p>
                   <div
-                    className="pt-3 flex items-center gap-2 text-xs font-noto-sans-bengali"
+                    className="pt-3 flex flex-wrap items-center gap-2 text-xs font-noto-sans-bengali"
                     style={{ borderTop: "1px solid rgba(212, 175, 55, 0.15)" }}
                   >
                     <HiClock size={16} style={{ color: "var(--color-gold)" }} aria-hidden="true" />
@@ -281,8 +279,7 @@ export default function ContactSection() {
               }}
             >
               <p
-                className="font-noto-sans-bengali text-charcoal-light leading-relaxed"
-                style={{ fontSize: "0.85rem" }}
+                className="font-noto-sans-bengali text-charcoal-light leading-relaxed text-xs sm:text-sm"
               >
                 <strong className="text-charcoal">দ্রষ্টব্য:</strong> চেম্বারে সরাসরি সাক্ষাতের
                 জন্য আগে থেকে ফোনে সময় নির্ধারণ করে নেওয়া সুবিধাজনক।
@@ -294,13 +291,13 @@ export default function ContactSection() {
           <div
             style={{
               opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : "translateX(30px)",
+              transform: visible ? "translateY(0)" : "translateY(30px)",
               transition: "opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s",
             }}
           >
             <form
               onSubmit={handleSubmit}
-              className="p-8 bg-white"
+              className="p-6 sm:p-8 bg-white"
               style={{ border: "1px solid rgba(212, 175, 55, 0.15)" }}
               noValidate
             >

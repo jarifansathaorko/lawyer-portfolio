@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Noto_Serif_Bengali, Noto_Sans_Bengali } from "next/font/google";
 import "./globals.css";
 
@@ -15,6 +15,13 @@ const notoSansBengali = Noto_Sans_Bengali({
   variable: "--font-noto-sans-bengali",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#01322C",
+};
 
 export const metadata: Metadata = {
   title: "অ্যাডভোকেট মোল্লা মোঃ আলী আশ্রাফ | এম.এস.এস, এলএল.বি (ঢা: বি:) | অ্যাডভোকেট, সুপ্রিম কোর্ট অব বাংলাদেশ",
@@ -54,8 +61,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="bn" className={`${notoSerifBengali.variable} ${notoSansBengali.variable}`}>
-      <body className="font-noto-sans-bengali antialiased text-charcoal bg-white">
+    <html
+      lang="bn"
+      className={`${notoSerifBengali.variable} ${notoSansBengali.variable} w-full overflow-x-hidden`}
+    >
+      <body className="font-noto-sans-bengali antialiased text-charcoal bg-white w-full max-w-full overflow-x-hidden">
         {children}
       </body>
     </html>

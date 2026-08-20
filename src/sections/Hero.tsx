@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-screen flex items-center w-full max-w-full overflow-hidden"
       aria-label="প্রধান হিরো সেকশন"
     >
       {/* Background Image */}
@@ -60,11 +60,11 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="container-legal relative z-10 py-32">
+      <div className="container-legal relative z-10 py-24 sm:py-32">
         <div className="max-w-3xl">
           {/* Eyebrow */}
           <div
-            className="flex items-center gap-3 mb-6"
+            className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6"
             style={{
               opacity: mounted ? 1 : 0,
               transform: mounted ? "translateY(0)" : "translateY(20px)",
@@ -73,8 +73,8 @@ export default function Hero() {
           >
             <GiScales className="text-gold flex-shrink-0" size={18} aria-hidden="true" />
             <span
-              className="font-noto-sans-bengali"
-              style={{ color: "var(--color-gold)", fontSize: "0.8rem", letterSpacing: "0.12em", textTransform: "uppercase" }}
+              className="font-noto-sans-bengali text-xs sm:text-sm"
+              style={{ color: "var(--color-gold)", letterSpacing: "0.12em", textTransform: "uppercase" }}
             >
               অ্যাডভোকেট · সুপ্রিম কোর্ট অব বাংলাদেশ
             </span>
@@ -86,7 +86,7 @@ export default function Hero() {
               width: "50px",
               height: "1.5px",
               backgroundColor: "var(--color-gold)",
-              marginBottom: "1.75rem",
+              marginBottom: "1.5rem",
               opacity: mounted ? 1 : 0,
               transform: mounted ? "scaleX(1)" : "scaleX(0)",
               transformOrigin: "left",
@@ -97,10 +97,10 @@ export default function Hero() {
 
           {/* Main Heading */}
           <h1
-            className="font-noto-serif-bengali font-bold leading-tight mb-6"
+            className="font-noto-serif-bengali font-bold leading-tight mb-5 sm:mb-6 break-words"
             style={{
-              fontSize: "clamp(2.2rem, 5vw, 4rem)",
-              lineHeight: "1.15",
+              fontSize: "clamp(1.85rem, 6vw, 3.8rem)",
+              lineHeight: "1.2",
               color: "var(--color-ivory)",
               opacity: mounted ? 1 : 0,
               transform: mounted ? "translateY(0)" : "translateY(30px)",
@@ -115,10 +115,9 @@ export default function Hero() {
 
           {/* Subheading */}
           <p
-            className="font-noto-sans-bengali leading-relaxed mb-10"
+            className="font-noto-sans-bengali leading-relaxed mb-8 sm:mb-10 text-sm sm:text-base md:text-lg"
             style={{
               color: "rgba(245, 245, 220, 0.95)",
-              fontSize: "clamp(1rem, 2vw, 1.15rem)",
               maxWidth: "580px",
               opacity: mounted ? 1 : 0,
               transform: mounted ? "translateY(0)" : "translateY(25px)",
@@ -131,7 +130,7 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div
-            className="flex flex-wrap gap-4"
+            className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 w-full sm:w-auto"
             style={{
               opacity: mounted ? 1 : 0,
               transform: mounted ? "translateY(0)" : "translateY(20px)",
@@ -139,7 +138,7 @@ export default function Hero() {
             }}
           >
             <button
-              className="btn-primary"
+              className="btn-primary w-full sm:w-auto"
               onClick={() => handleScrollTo("#contact")}
               id="hero-primary-cta"
               aria-label="যোগাযোগ পাতায় যান"
@@ -148,7 +147,7 @@ export default function Hero() {
               <HiArrowRight size={16} aria-hidden="true" />
             </button>
             <button
-              className="btn-outline"
+              className="btn-outline w-full sm:w-auto"
               onClick={() => handleScrollTo("#services")}
               id="hero-secondary-cta"
               aria-label="সেবাসমূহ পাতায় যান"

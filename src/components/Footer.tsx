@@ -24,14 +24,15 @@ export default function Footer() {
 
   return (
     <footer
+      className="w-full max-w-full overflow-hidden"
       style={{ backgroundColor: "var(--color-forest-green)" }}
       role="contentinfo"
     >
       {/* Gold top border */}
       <div style={{ height: "2px", backgroundColor: "var(--color-gold)" }} />
 
-      <div className="container-legal py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="container-legal py-10 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">

@@ -64,7 +64,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
+        className={`fixed top-0 left-0 right-0 z-50 w-full max-w-full transition-all duration-400 ${
           scrolled
             ? "bg-forest-green-900/97 backdrop-blur-md shadow-green"
             : "bg-transparent"
@@ -79,16 +79,16 @@ export default function Navbar() {
         aria-label="প্রধান নেভিগেশন"
       >
         <div className="container-legal">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16 sm:h-20 gap-2">
             {/* Logo */}
             <a
               href="#hero"
               onClick={(e) => { e.preventDefault(); handleNavClick("#hero"); }}
-              className="flex items-center gap-3 group"
+              className="flex items-center gap-2 sm:gap-3 group min-w-0 flex-shrink"
               aria-label="হোম পাতায় যান"
             >
               <div
-                className="flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300"
+                className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full transition-all duration-300 flex-shrink-0"
                 style={{
                   border: "1.5px solid var(--color-gold)",
                   backgroundColor: "rgba(212, 175, 55, 0.12)",
@@ -96,25 +96,24 @@ export default function Navbar() {
               >
                 <GiScales
                   style={{ color: "var(--color-gold)" }}
-                  size={21}
+                  className="w-4 h-4 sm:w-5 sm:h-5"
                   aria-hidden="true"
                 />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col min-w-0">
                 <span
-                  className="font-noto-serif-bengali font-semibold leading-tight"
-                  style={{ fontSize: "1.05rem", color: "var(--color-ivory)" }}
+                  className="font-noto-serif-bengali font-semibold leading-tight truncate text-[0.92rem] sm:text-[1.05rem]"
+                  style={{ color: "var(--color-ivory)" }}
                 >
                   মোল্লা মোঃ আলী আশ্রাফ
                 </span>
                 <span
-                  className="font-noto-sans-bengali leading-none"
+                  className="font-noto-sans-bengali leading-none truncate text-[0.62rem] sm:text-[0.72rem]"
                   style={{
-                    fontSize: "0.72rem",
                     letterSpacing: "0.03em",
                     color: "var(--color-gold)",
                     fontWeight: 500,
-                    marginTop: "3px",
+                    marginTop: "2px",
                   }}
                 >
                   অ্যাডভোকেট · সুপ্রিম কোর্ট অব বাংলাদেশ
@@ -123,7 +122,7 @@ export default function Navbar() {
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-1 flex-shrink-0">
               {navLinks.map((link) => {
                 const sectionId = link.href.replace("#", "");
                 const isActive = activeSection === sectionId;
@@ -183,7 +182,7 @@ export default function Navbar() {
 
             {/* Mobile Hamburger */}
             <button
-              className="lg:hidden p-2 focus:outline-none focus:ring-2 focus:ring-gold/50"
+              className="lg:hidden p-2 flex-shrink-0 rounded-md focus:outline-none focus:ring-2 focus:ring-gold/50 ml-1"
               style={{ color: "var(--color-ivory)" }}
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label={menuOpen ? "মেনু বন্ধ করুন" : "মেনু খুলুন"}
@@ -200,7 +199,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
+          className={`lg:hidden w-full max-w-full overflow-hidden transition-all duration-300 ${
             menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
           }`}
           style={{

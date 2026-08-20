@@ -46,6 +46,7 @@ export default function CredibilitySection() {
       ref={sectionRef}
       id="credibility"
       aria-label="বিশ্বাসযোগ্যতা ও অভিজ্ঞতা"
+      className="w-full max-w-full overflow-hidden"
       style={{ backgroundColor: "var(--color-ivory)" }}
     >
       {/* Gold top border */}
@@ -56,7 +57,7 @@ export default function CredibilitySection() {
       <div className="container-legal section-pad">
         {/* Section heading */}
         <div
-          className="text-center mb-12"
+          className="text-center mb-10 sm:mb-12"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(20px)",
@@ -67,7 +68,7 @@ export default function CredibilitySection() {
           <h2
             className="font-noto-serif-bengali font-bold"
             style={{
-              fontSize: "clamp(1.6rem, 3vw, 2.25rem)",
+              fontSize: "clamp(1.5rem, 4vw, 2.25rem)",
               color: "var(--color-forest-green)",
             }}
           >
@@ -75,11 +76,11 @@ export default function CredibilitySection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {credentials.map((item, index) => (
             <article
               key={index}
-              className="bg-white p-8 border border-gold/10 group"
+              className="bg-white p-6 sm:p-8 border border-gold/10 group"
               style={{
                 borderTop: "2px solid var(--color-gold)",
                 opacity: visible ? 1 : 0,
@@ -89,7 +90,7 @@ export default function CredibilitySection() {
               }}
             >
               <div
-                className="mb-5 transition-transform duration-300 group-hover:scale-105"
+                className="mb-4 sm:mb-5 transition-transform duration-300 group-hover:scale-105"
                 style={{ color: "var(--color-gold)" }}
               >
                 {item.icon}

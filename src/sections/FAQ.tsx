@@ -52,14 +52,14 @@ export default function FAQ() {
     <section
       ref={sectionRef}
       id="faq"
-      className="section-pad"
+      className="section-pad w-full max-w-full overflow-hidden"
       aria-label="সাধারণ জিজ্ঞাসা"
       style={{ backgroundColor: "var(--color-white)" }}
     >
       <div className="container-legal">
         {/* Header */}
         <div
-          className="text-center max-w-xl mx-auto mb-12"
+          className="text-center max-w-xl mx-auto mb-8 sm:mb-12"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(20px)",
@@ -71,7 +71,7 @@ export default function FAQ() {
           <h2
             className="font-noto-serif-bengali font-bold"
             style={{
-              fontSize: "clamp(1.6rem, 3vw, 2.25rem)",
+              fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
               color: "var(--color-forest-green)",
             }}
           >
@@ -101,16 +101,15 @@ export default function FAQ() {
               >
                 {/* Question Button */}
                 <button
-                  className="w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+                  className="w-full flex items-center justify-between gap-3 text-left px-4 py-4 sm:px-6 sm:py-5"
                   onClick={() => toggle(index)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                   id={`faq-question-${index}`}
                 >
                   <span
-                    className="font-noto-serif-bengali font-semibold pr-2"
+                    className="font-noto-serif-bengali font-semibold pr-1 text-sm sm:text-base"
                     style={{
-                      fontSize: "1rem",
                       color: isOpen ? "var(--color-forest-green)" : "var(--color-charcoal)",
                       lineHeight: "1.4",
                     }}
@@ -118,7 +117,7 @@ export default function FAQ() {
                     {faq.q}
                   </span>
                   <span
-                    className="flex-shrink-0 flex items-center justify-center w-8 h-8"
+                    className="flex-shrink-0 flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8"
                     style={{
                       backgroundColor: isOpen
                         ? "var(--color-gold)"
@@ -129,9 +128,9 @@ export default function FAQ() {
                     aria-hidden="true"
                   >
                     {isOpen ? (
-                      <HiMinus size={16} />
+                      <HiMinus size={15} />
                     ) : (
-                      <HiPlus size={16} />
+                      <HiPlus size={15} />
                     )}
                   </span>
                 </button>
@@ -147,10 +146,9 @@ export default function FAQ() {
                     transition: "max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                   }}
                 >
-                  <div className="px-6 pb-6">
+                  <div className="px-4 pb-4 sm:px-6 sm:pb-6">
                     <p
-                      className="font-noto-sans-bengali text-charcoal-light leading-relaxed"
-                      style={{ fontSize: "0.95rem" }}
+                      className="font-noto-sans-bengali text-charcoal-light leading-relaxed text-xs sm:text-sm"
                     >
                       {faq.a}
                     </p>

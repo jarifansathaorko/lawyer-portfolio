@@ -26,25 +26,25 @@ export default function AboutLawyer() {
     <section
       ref={sectionRef}
       id="about"
-      className="section-pad"
+      className="section-pad w-full max-w-full overflow-hidden"
       aria-label="আইনজীবী সম্পর্কে"
       style={{ backgroundColor: "var(--color-white)" }}
     >
       <div className="container-legal">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
           {/* Portrait Column */}
           <div
             className="relative"
             style={{
               opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : "translateX(-40px)",
+              transform: visible ? "translateY(0)" : "translateY(30px)",
               transition: "opacity 0.8s ease 0.1s, transform 0.8s ease 0.1s",
             }}
           >
             {/* Portrait Image */}
             <div
-              className="relative overflow-hidden"
+              className="relative overflow-hidden mx-auto max-w-md lg:max-w-none"
               style={{
                 aspectRatio: "1/1",
                 maxHeight: "520px",
@@ -70,7 +70,7 @@ export default function AboutLawyer() {
           <div
             style={{
               opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : "translateX(40px)",
+              transform: visible ? "translateY(0)" : "translateY(30px)",
               transition: "opacity 0.8s ease 0.25s, transform 0.8s ease 0.25s",
             }}
           >
@@ -80,7 +80,7 @@ export default function AboutLawyer() {
             <h2
               className="font-noto-serif-bengali font-bold mb-6"
               style={{
-                fontSize: "clamp(1.6rem, 2.5vw, 2.25rem)",
+                fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
                 color: "var(--color-forest-green)",
                 lineHeight: "1.3",
               }}
@@ -90,8 +90,7 @@ export default function AboutLawyer() {
 
             <div className="space-y-4">
               <p
-                className="font-noto-sans-bengali leading-relaxed text-charcoal-light"
-                style={{ fontSize: "1rem" }}
+                className="font-noto-sans-bengali leading-relaxed text-charcoal-light text-sm sm:text-base"
               >
                 <strong className="text-charcoal">মোল্লা মোঃ আলী আশ্রাফ</strong> (এম.এস.এস, এলএল.বি, ঢাকা বিশ্ববিদ্যালয়) একজন
                 অভিজ্ঞ দেওয়ানি আইনজীবী এবং সুপ্রিম কোর্ট অব বাংলাদেশের অ্যাডভোকেট।
@@ -101,8 +100,7 @@ export default function AboutLawyer() {
                 করে আসছেন।
               </p>
               <p
-                className="font-noto-sans-bengali leading-relaxed text-charcoal-light"
-                style={{ fontSize: "1rem" }}
+                className="font-noto-sans-bengali leading-relaxed text-charcoal-light text-sm sm:text-base"
               >
                 প্রতিটি বিষয়ে মামলার বাস্তব পরিস্থিতি, প্রাসঙ্গিক দলিল এবং প্রযোজ্য
                 আইন বিবেচনা করে দায়িত্বশীল ও বাস্তবসম্মত আইনগত দিকনির্দেশনা প্রদান
@@ -113,7 +111,7 @@ export default function AboutLawyer() {
 
             {/* Horizontal gold divider */}
             <div
-              className="my-8"
+              className="my-6 sm:my-8"
               style={{
                 height: "1px",
                 backgroundColor: "var(--color-gold)",
@@ -123,11 +121,11 @@ export default function AboutLawyer() {
             />
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4">
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="text-center py-4"
+                  className="text-center py-3 sm:py-4 px-1"
                   style={{
                     borderRight: index < stats.length - 1
                       ? "1px solid rgba(212, 175, 55, 0.2)"
@@ -138,17 +136,15 @@ export default function AboutLawyer() {
                   }}
                 >
                   <div
-                    className="font-noto-serif-bengali font-bold"
+                    className="font-noto-serif-bengali font-bold text-lg sm:text-2xl lg:text-3xl"
                     style={{
-                      fontSize: "clamp(1.1rem, 2vw, 1.5rem)",
                       color: "var(--color-forest-green)",
                     }}
                   >
                     {stat.value}
                   </div>
                   <div
-                    className="font-noto-sans-bengali text-charcoal-light mt-1"
-                    style={{ fontSize: "0.8rem" }}
+                    className="font-noto-sans-bengali text-charcoal-light mt-1 text-[0.72rem] sm:text-xs md:text-sm leading-tight"
                   >
                     {stat.label}
                   </div>
@@ -158,7 +154,7 @@ export default function AboutLawyer() {
 
             {/* Designation badge */}
             <div
-              className="mt-8 flex items-center gap-4 p-5"
+              className="mt-6 sm:mt-8 flex items-center gap-4 p-4 sm:p-5"
               style={{
                 backgroundColor: "var(--color-ivory)",
                 borderLeft: "3px solid var(--color-gold)",
@@ -167,13 +163,13 @@ export default function AboutLawyer() {
               }}
             >
               <div>
-                <div className="font-noto-serif-bengali font-bold text-forest-green" style={{ fontSize: "1.05rem" }}>
+                <div className="font-noto-serif-bengali font-bold text-forest-green text-sm sm:text-base">
                   অ্যাডভোকেট মোল্লা মোঃ আলী আশ্রাফ
                 </div>
-                <div className="font-noto-sans-bengali font-semibold text-gold-dark mt-0.5" style={{ fontSize: "0.85rem", color: "var(--color-gold-dark)" }}>
+                <div className="font-noto-sans-bengali font-semibold text-gold-dark mt-0.5 text-xs sm:text-sm" style={{ color: "var(--color-gold-dark)" }}>
                   এম.এস.এস, এলএল.বি (ঢা: বি:)
                 </div>
-                <div className="font-noto-sans-bengali text-charcoal-light mt-0.5" style={{ fontSize: "0.8rem" }}>
+                <div className="font-noto-sans-bengali text-charcoal-light mt-0.5 text-xs sm:text-xs">
                   অ্যাডভোকেট, সুপ্রিম কোর্ট অব বাংলাদেশ · দেওয়ানি আইন বিশেষজ্ঞ
                 </div>
               </div>

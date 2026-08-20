@@ -60,14 +60,14 @@ export default function PracticeAreasSection() {
     <section
       ref={sectionRef}
       id="practice-areas"
-      className="section-pad"
+      className="section-pad w-full max-w-full overflow-hidden"
       aria-label="আইনগত কার্যক্ষেত্র"
       style={{ backgroundColor: "var(--color-white)" }}
     >
       <div className="container-legal">
         {/* Header */}
         <div
-          className="text-center max-w-2xl mx-auto mb-14"
+          className="text-center max-w-2xl mx-auto mb-10 sm:mb-14"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(20px)",
@@ -79,7 +79,7 @@ export default function PracticeAreasSection() {
           <h2
             className="font-noto-serif-bengali font-bold"
             style={{
-              fontSize: "clamp(1.6rem, 3vw, 2.25rem)",
+              fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
               color: "var(--color-forest-green)",
               marginBottom: "1rem",
             }}
@@ -87,23 +87,21 @@ export default function PracticeAreasSection() {
             আইনগত কার্যক্ষেত্র
           </h2>
           <p
-            className="font-noto-sans-bengali text-charcoal-light"
-            style={{ fontSize: "1rem" }}
+            className="font-noto-sans-bengali text-charcoal-light text-sm sm:text-base"
           >
             যেসব আইনগত বিষয়ে বিশেষ মনোযোগ ও দক্ষতার সঙ্গে কাজ করা হয়।
           </p>
         </div>
 
         {/* Practice Areas Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {practiceAreas.map((area, index) => (
             <article
               key={index}
-              className="relative overflow-hidden group"
+              className="relative overflow-hidden group p-6 sm:p-8"
               style={{
                 backgroundColor: "var(--color-ivory)",
                 border: "1px solid rgba(212, 175, 55, 0.15)",
-                padding: "2.25rem 2rem",
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateY(0)" : "translateY(35px)",
                 transition: `opacity 0.6s ease ${index * 0.09}s, transform 0.6s ease ${index * 0.09}s`,

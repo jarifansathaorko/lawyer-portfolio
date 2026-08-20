@@ -44,29 +44,29 @@ export default function CommitmentSection() {
     <section
       ref={sectionRef}
       id="commitment"
-      className="section-pad"
+      className="section-pad w-full max-w-full overflow-hidden"
       aria-label="আমাদের পেশাগত অঙ্গীকার"
       style={{ backgroundColor: "var(--color-ivory)" }}
     >
       <div className="container-legal">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Left: Image */}
           <div
-            className="relative"
+            className="relative mx-auto max-w-md lg:max-w-none w-full"
             style={{
               opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : "translateX(-40px)",
+              transform: visible ? "translateY(0)" : "translateY(30px)",
               transition: "opacity 0.8s ease 0.1s, transform 0.8s ease 0.1s",
             }}
           >
             {/* Decorative corner accent */}
             <div
-              className="absolute"
+              className="hidden sm:block absolute"
               style={{
-                top: "-10px",
-                right: "-10px",
-                width: "60px",
-                height: "60px",
+                top: "-8px",
+                right: "-8px",
+                width: "50px",
+                height: "50px",
                 borderTop: "2px solid var(--color-gold)",
                 borderRight: "2px solid var(--color-gold)",
                 zIndex: 2,
@@ -100,16 +100,16 @@ export default function CommitmentSection() {
           <div
             style={{
               opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : "translateX(40px)",
+              transform: visible ? "translateY(0)" : "translateY(30px)",
               transition: "opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s",
             }}
           >
             <span className="section-eyebrow">পেশাগত মূল্যবোধ</span>
             <div className="gold-divider" aria-hidden="true" />
             <h2
-              className="font-noto-serif-bengali font-bold mb-8"
+              className="font-noto-serif-bengali font-bold mb-6 sm:mb-8"
               style={{
-                fontSize: "clamp(1.6rem, 2.5vw, 2.25rem)",
+                fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
                 color: "var(--color-forest-green)",
                 lineHeight: "1.3",
               }}
@@ -118,14 +118,14 @@ export default function CommitmentSection() {
             </h2>
 
             {/* Commitment list */}
-            <ul className="flex flex-col gap-5" role="list">
+            <ul className="flex flex-col gap-4 sm:gap-5" role="list">
               {commitments.map((item, index) => (
                 <li
                   key={index}
-                  className="flex gap-4 items-start"
+                  className="flex gap-3 sm:gap-4 items-start"
                   style={{
                     opacity: visible ? 1 : 0,
-                    transform: visible ? "translateX(0)" : "translateX(20px)",
+                    transform: visible ? "translateY(0)" : "translateY(15px)",
                     transition: `opacity 0.5s ease ${0.35 + index * 0.1}s, transform 0.5s ease ${0.35 + index * 0.1}s`,
                   }}
                 >
@@ -137,14 +137,13 @@ export default function CommitmentSection() {
                   />
                   <div>
                     <h3
-                      className="font-noto-serif-bengali font-semibold mb-1"
-                      style={{ fontSize: "1rem", color: "var(--color-forest-green)" }}
+                      className="font-noto-serif-bengali font-semibold mb-1 text-sm sm:text-base"
+                      style={{ color: "var(--color-forest-green)" }}
                     >
                       {item.title}
                     </h3>
                     <p
-                      className="font-noto-sans-bengali text-charcoal-light leading-relaxed"
-                      style={{ fontSize: "0.9rem" }}
+                      className="font-noto-sans-bengali text-charcoal-light leading-relaxed text-xs sm:text-sm"
                     >
                       {item.desc}
                     </p>
@@ -155,20 +154,19 @@ export default function CommitmentSection() {
 
             {/* Divider */}
             <div
-              className="my-8"
+              className="my-6 sm:my-8"
               style={{ height: "1px", backgroundColor: "rgba(212,175,55,0.2)" }}
               aria-hidden="true"
             />
 
             {/* Quote */}
             <blockquote
-              className="relative pl-6"
+              className="relative pl-4 sm:pl-6"
               style={{ borderLeft: "3px solid var(--color-gold)" }}
             >
               <p
-                className="font-noto-serif-bengali italic"
+                className="font-noto-serif-bengali italic text-sm sm:text-base"
                 style={{
-                  fontSize: "1rem",
                   color: "var(--color-forest-green)",
                   lineHeight: "1.7",
                 }}
@@ -176,8 +174,8 @@ export default function CommitmentSection() {
                 "ন্যায়বিচারের পথে অভিজ্ঞতা, সততা ও দায়িত্বশীলতার সঙ্গে আপনার পাশে।"
               </p>
               <cite
-                className="font-noto-sans-bengali not-italic block mt-2"
-                style={{ fontSize: "0.8rem", color: "var(--color-gold)" }}
+                className="font-noto-sans-bengali not-italic block mt-2 text-xs sm:text-sm"
+                style={{ color: "var(--color-gold)" }}
               >
                 — অ্যাডভোকেট মোল্লা মোঃ আলী আশ্রাফ
               </cite>

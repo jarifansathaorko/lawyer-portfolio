@@ -42,14 +42,14 @@ export default function ConsultationProcess() {
     <section
       ref={sectionRef}
       id="process"
-      className="section-pad"
+      className="section-pad w-full max-w-full overflow-hidden"
       aria-label="আইনগত পরামর্শের প্রক্রিয়া"
       style={{ backgroundColor: "var(--color-cream)" }}
     >
       <div className="container-legal">
         {/* Header */}
         <div
-          className="text-center max-w-xl mx-auto mb-14"
+          className="text-center max-w-xl mx-auto mb-10 sm:mb-14"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(20px)",
@@ -61,7 +61,7 @@ export default function ConsultationProcess() {
           <h2
             className="font-noto-serif-bengali font-bold"
             style={{
-              fontSize: "clamp(1.6rem, 3vw, 2.25rem)",
+              fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
               color: "var(--color-forest-green)",
             }}
           >
@@ -70,7 +70,7 @@ export default function ConsultationProcess() {
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-0 relative">
           {/* Connector line (desktop) */}
           <div
             className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%]"
@@ -81,7 +81,7 @@ export default function ConsultationProcess() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="relative flex flex-col items-center text-center px-6 pb-8 pt-2"
+              className="relative flex flex-col items-center text-center px-4 sm:px-6 pb-6 sm:pb-8 pt-2"
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateY(0)" : "translateY(30px)",
@@ -90,7 +90,7 @@ export default function ConsultationProcess() {
             >
               {/* Step number circle */}
               <div
-                className="relative z-10 flex items-center justify-center w-20 h-20 rounded-full mb-6"
+                className="relative z-10 flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full mb-4 sm:mb-6"
                 style={{
                   backgroundColor: "var(--color-white)",
                   border: "2px solid var(--color-gold)",
@@ -98,8 +98,8 @@ export default function ConsultationProcess() {
                 }}
               >
                 <span
-                  className="font-noto-serif-bengali font-bold"
-                  style={{ fontSize: "1.5rem", color: "var(--color-forest-green)" }}
+                  className="font-noto-serif-bengali font-bold text-xl sm:text-2xl"
+                  style={{ color: "var(--color-forest-green)" }}
                 >
                   {step.number}
                 </span>

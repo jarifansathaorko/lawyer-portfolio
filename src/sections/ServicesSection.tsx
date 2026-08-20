@@ -65,14 +65,14 @@ export default function ServicesSection() {
     <section
       ref={sectionRef}
       id="services"
-      className="section-pad"
+      className="section-pad w-full max-w-full overflow-hidden"
       aria-label="আইনগত সেবাসমূহ"
       style={{ backgroundColor: "var(--color-white)" }}
     >
       <div className="container-legal">
         {/* Header */}
         <div
-          className="max-w-xl mb-14"
+          className="max-w-xl mb-10 sm:mb-14"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(20px)",
@@ -84,7 +84,7 @@ export default function ServicesSection() {
           <h2
             className="font-noto-serif-bengali font-bold"
             style={{
-              fontSize: "clamp(1.6rem, 3vw, 2.25rem)",
+              fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)",
               color: "var(--color-forest-green)",
               marginBottom: "1rem",
             }}
@@ -92,8 +92,7 @@ export default function ServicesSection() {
             আইনগত সেবাসমূহ
           </h2>
           <p
-            className="font-noto-sans-bengali text-charcoal-light leading-relaxed"
-            style={{ fontSize: "1rem" }}
+            className="font-noto-sans-bengali text-charcoal-light leading-relaxed text-sm sm:text-base"
           >
             দেওয়ানি, সম্পত্তি, ভূমি, উত্তরাধিকার ও রিয়েল এস্টেট-সংক্রান্ত
             বিষয়ে পেশাদার আইনগত সহায়তা।
@@ -101,11 +100,11 @@ export default function ServicesSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {services.map((service, index) => (
             <article
               key={index}
-              className="p-7 group cursor-default relative overflow-hidden"
+              className="p-5 sm:p-7 group cursor-default relative overflow-hidden"
               style={{
                 backgroundColor: "var(--color-ivory)",
                 border: "1px solid rgba(212, 175, 55, 0.15)",

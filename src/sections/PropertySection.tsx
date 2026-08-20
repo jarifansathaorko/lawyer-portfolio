@@ -40,7 +40,7 @@ export default function PropertySection() {
     <section
       ref={sectionRef}
       id="property"
-      className="relative overflow-hidden"
+      className="relative w-full max-w-full overflow-hidden"
       aria-label="সম্পত্তি ও ভূমি বিষয়ক বিশেষায়িত সেবা"
       style={{ backgroundColor: "var(--color-forest-green)" }}
     >
@@ -74,18 +74,18 @@ export default function PropertySection() {
       />
 
       <div className="container-legal section-pad relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           {/* Left: Text */}
           <div
             style={{
               opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : "translateX(-30px)",
+              transform: visible ? "translateY(0)" : "translateY(30px)",
               transition: "opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s",
             }}
           >
             <span
-              className="font-noto-sans-bengali block mb-3"
-              style={{ color: "var(--color-gold)", fontSize: "0.75rem", letterSpacing: "0.12em", textTransform: "uppercase" }}
+              className="font-noto-sans-bengali block mb-3 text-xs sm:text-sm"
+              style={{ color: "var(--color-gold)", letterSpacing: "0.12em", textTransform: "uppercase" }}
             >
               বিশেষায়িত আইনগত সেবা
             </span>
@@ -95,13 +95,13 @@ export default function PropertySection() {
             />
             <h2
               className="font-noto-serif-bengali font-bold mb-6"
-              style={{ fontSize: "clamp(1.6rem, 3vw, 2.5rem)", lineHeight: "1.2", color: "var(--color-ivory)" }}
+              style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.5rem)", lineHeight: "1.2", color: "var(--color-ivory)" }}
             >
               সম্পত্তি ও ভূমি সংক্রান্ত আইনগত সহায়তা
             </h2>
             <p
-              className="font-noto-sans-bengali leading-relaxed mb-8"
-              style={{ fontSize: "1rem", color: "rgba(245, 245, 220, 0.95)" }}
+              className="font-noto-sans-bengali leading-relaxed mb-8 text-sm sm:text-base"
+              style={{ color: "rgba(245, 245, 220, 0.95)" }}
             >
               সম্পত্তি ও ভূমি-সংক্রান্ত বিরোধ অনেক সময় জটিল এবং দীর্ঘমেয়াদি হতে
               পারে। সংশ্লিষ্ট দলিল, মালিকানার ইতিহাস এবং বিরোধের প্রকৃতি বিবেচনা করে
@@ -109,7 +109,7 @@ export default function PropertySection() {
             </p>
 
             <button
-              className="btn-primary"
+              className="btn-primary w-full sm:w-auto"
               onClick={() => handleScrollTo("#contact")}
               id="property-cta"
             >
@@ -122,12 +122,12 @@ export default function PropertySection() {
           <div
             style={{
               opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : "translateX(30px)",
+              transform: visible ? "translateY(0)" : "translateY(30px)",
               transition: "opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s",
             }}
           >
             <div
-              className="p-8"
+              className="p-6 sm:p-8"
               style={{
                 backgroundColor: "rgba(1, 50, 44, 0.55)",
                 border: "1px solid rgba(212, 175, 55, 0.35)",
@@ -141,14 +141,14 @@ export default function PropertySection() {
                 যেসব বিষয়ে সহায়তা পাওয়া যায়
               </h3>
 
-              <ul className="flex flex-col gap-4" role="list">
+              <ul className="flex flex-col gap-3 sm:gap-4" role="list">
                 {highlights.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-center gap-3"
                     style={{
                       opacity: visible ? 1 : 0,
-                      transform: visible ? "translateX(0)" : "translateX(20px)",
+                      transform: visible ? "translateY(0)" : "translateY(15px)",
                       transition: `opacity 0.5s ease ${0.4 + index * 0.07}s, transform 0.5s ease ${0.4 + index * 0.07}s`,
                     }}
                   >
@@ -159,8 +159,8 @@ export default function PropertySection() {
                       aria-hidden="true"
                     />
                     <span
-                      className="font-noto-sans-bengali"
-                      style={{ fontSize: "0.95rem", color: "rgba(245, 245, 220, 0.97)" }}
+                      className="font-noto-sans-bengali text-sm sm:text-base"
+                      style={{ color: "rgba(245, 245, 220, 0.97)" }}
                     >
                       {item}
                     </span>
@@ -170,7 +170,7 @@ export default function PropertySection() {
 
               {/* Bottom quote */}
               <div
-                className="mt-8 pt-6"
+                className="mt-6 sm:mt-8 pt-5 sm:pt-6"
                 style={{ borderTop: "1px solid rgba(212,175,55,0.2)" }}
               >
                 <p

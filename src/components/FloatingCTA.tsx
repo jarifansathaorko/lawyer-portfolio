@@ -43,7 +43,7 @@ export default function FloatingCTA() {
             href="https://wa.me/8801552329553"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 px-4 py-3 text-sm font-noto-sans-bengali font-medium"
+            className="flex items-center gap-2 sm:gap-3 px-3.5 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm font-noto-sans-bengali font-medium max-w-[calc(100vw-2.5rem)] shadow-lg"
             style={{
               backgroundColor: "#25D366",
               color: "#FFFFFF",
@@ -52,14 +52,14 @@ export default function FloatingCTA() {
             }}
             aria-label="হোয়াটসঅ্যাপে যোগাযোগ করুন"
           >
-            <FaWhatsapp size={18} aria-hidden="true" />
-            হোয়াটসঅ্যাপে যোগাযোগ
+            <FaWhatsapp size={18} aria-hidden="true" className="flex-shrink-0" />
+            <span className="truncate">হোয়াটসঅ্যাপে যোগাযোগ</span>
           </a>
 
           {/* Phone */}
           <a
             href="tel:+8801552329553"
-            className="flex items-center gap-3 px-4 py-3 text-sm font-noto-sans-bengali font-medium"
+            className="flex items-center gap-2 sm:gap-3 px-3.5 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm font-noto-sans-bengali font-medium max-w-[calc(100vw-2.5rem)] shadow-lg"
             style={{
               backgroundColor: "var(--color-forest-green)",
               color: "var(--color-ivory)",
@@ -69,8 +69,8 @@ export default function FloatingCTA() {
             }}
             aria-label="কল করুন"
           >
-            <HiPhone size={18} aria-hidden="true" style={{ color: "var(--color-gold)" }} />
-            ০১৫৫২-৩২৯৫৫৩
+            <HiPhone size={18} aria-hidden="true" style={{ color: "var(--color-gold)" }} className="flex-shrink-0" />
+            <span className="truncate">০১৫৫২-৩২৯৫৫৩</span>
           </a>
         </>
       )}
@@ -78,7 +78,7 @@ export default function FloatingCTA() {
       {/* Main toggle button */}
       <button
         onClick={() => setExpanded(!expanded)}
-        className="flex items-center justify-center w-14 h-14"
+        className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14"
         style={{
           backgroundColor: "var(--color-gold)",
           color: "var(--color-forest-green)",
@@ -93,8 +93,8 @@ export default function FloatingCTA() {
         aria-expanded={expanded}
         onMouseEnter={(e) => {
           (e.currentTarget as HTMLElement).style.transform = expanded
-            ? "rotate(45deg) scale(1.1)"
-            : "scale(1.1)";
+            ? "rotate(45deg) scale(1.08)"
+            : "scale(1.08)";
         }}
         onMouseLeave={(e) => {
           (e.currentTarget as HTMLElement).style.transform = expanded
@@ -102,7 +102,7 @@ export default function FloatingCTA() {
             : "rotate(0)";
         }}
       >
-        <HiPhone size={22} aria-hidden="true" />
+        <HiPhone className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
       </button>
     </div>
   );
